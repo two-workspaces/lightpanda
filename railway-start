@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+if [ ${#LIGHTPANDA_TOKEN} -lt 16 ]; then echo "LIGHTPANDA_TOKEN must be at least 16 characters" >&2; exit 1; fi
+export PORT=${PORT:-8080}
+# Lightpanda has no auth of its own, so it only listens on loopback; Caddy checks the token.
+/bin/lightpanda serve --host 127.0.0.1 --port 9222 --block-private-networks --log-level info $LIGHTPANDA_ARGS &
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
+# Either process exiting restarts the container.
+wait -n
+exit 1

@@ -1,0 +1,11 @@
+{
+  "name": "Lightpanda | Headless Browser for AI Agents and Scraping (CDP)",
+  "short_name": "Lightpanda Browser",
+  "description": "Lightpanda headless browser: Playwright and Puppeteer over CDP, ~30 MB",
+  "category": "Automation",
+  "image": "https://raw.githubusercontent.com/two-workspaces/lightpanda/main/icon.png",
+  "card_desc": "Lightpanda, the headless browser written in Zig for AI agents and scraping: Playwright, Puppeteer and chromedp connect over CDP, behind a token gate, with private networks blocked. Starts instantly and idles at a few dozen MB.",
+  "deploy_marker": "two-workspaces/lightpanda",
+  "id": "",
+  "published": false
+}
