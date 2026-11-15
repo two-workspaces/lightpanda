@@ -1,6 +1,6 @@
 # Deploy and Host Lightpanda on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/lightpanda-server?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=lightpanda-server)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/browser?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=browser)
 
 [Lightpanda](https://github.com/lightpanda-io/browser) is an open-source headless browser built for AI agents and scraping. It is written in Zig and isn't a Chromium fork: it runs JavaScript with V8 on a real DOM, but never renders pixels, so it starts instantly and uses a fraction of Chrome's memory. It speaks the Chrome DevTools Protocol (CDP), so Playwright, Puppeteer, chromedp, browser-use and Stagehand drive it like Chrome. This template runs a pinned Lightpanda release behind a token gate.
 
