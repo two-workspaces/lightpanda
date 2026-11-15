@@ -1,7 +1,7 @@
-FROM caddy:2.10.2 AS caddy
+FROM caddy:2.11.9 AS caddy
 
 # upgrade: github lightpanda-io/browser
-FROM lightpanda/browser:1.0.2
+FROM lightpanda/browser:1.0.4
 COPY --from=caddy /usr/bin/caddy /usr/local/bin/caddy
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY railway-start /usr/local/bin/railway-start

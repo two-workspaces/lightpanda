@@ -7,7 +7,11 @@
 	# Railway healthcheck, no token needed.
 	handle /health {
 		rewrite * /json/version
-		reverse_proxy 127.0.0.1:9222
+		# Since 1.0.4 Lightpanda answers 403 to any Host that isn't loopback, Railway's healthcheck included.
+		reverse_proxy 127.0.0.1:9222 {
+			header_up Host 127.0.0.1:9222
+			header_up -Origin
+		}
 	}
 
 	@authed expression `{header.Authorization} == "Bearer {$LIGHTPANDA_TOKEN}" || {query.token} == "{$LIGHTPANDA_TOKEN}"`
